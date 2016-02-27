@@ -1,0 +1,3 @@
+toy_project_event_sourcing_homepage:
+    path:     /
+    defaults: { _controller: ToyProjectEventSourcingBundle:Default:index }
