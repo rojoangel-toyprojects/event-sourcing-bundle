@@ -1,0 +1,30 @@
+{
+  "name" : "rojoangel-toyprojects/event_sourcing_bundle",
+  "description" : "Event sourcing toy project bundle",
+  "type" : "symfony-bundle",
+  "authors" : [{
+    "name" : "Angel Rojo",
+    "email" : "rojo.angel@gmail.com"
+  }],
+  "keywords" : [
+    "event sourcing bundle"
+  ],
+  "license" : [
+    "MIT"
+  ],
+  "require" : {
+  },
+  "autoload" : {
+    "psr-0" : {
+      "ToyProject\\EventSourcingBundle" : ""
+    }
+  },
+  "target-dir" : "ToyProject/EventSourcingBundle",
+  "repositories" : [{
+  }],
+  "extra" : {
+    "branch-alias" : {
+      "dev-master" : "some_version-dev"
+    }
+  }
+}
