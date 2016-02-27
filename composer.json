@@ -29,5 +29,8 @@
     "branch-alias" : {
       "dev-master" : "some_version-dev"
     }
+  },
+  "require-dev": {
+    "symfony/symfony": "^2.8"
   }
 }
