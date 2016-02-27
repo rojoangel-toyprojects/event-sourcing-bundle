@@ -5,10 +5,11 @@ namespace ToyProject\EventSourcingBundle\Command;
 use Broadway\CommandHandling\CommandBusInterface;
 use Broadway\UuidGenerator\UuidGeneratorInterface;
 use Command\Payment\CreateCommand;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class CreatePaymentCommand
+class CreatePaymentCommand extends Command
 {
 
     /** @var UuidGeneratorInterface */
@@ -27,6 +28,7 @@ class CreatePaymentCommand
         CommandBusInterface $commandBus
     )
     {
+        parent::__construct();
         $this->uuidGenerator = $uuidGenerator;
         $this->commandBus = $commandBus;
     }
@@ -39,5 +41,4 @@ class CreatePaymentCommand
 
         $output->writeln(sprintf('%s payment created', $paymentId));
     }
-
 }

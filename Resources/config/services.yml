@@ -2,8 +2,8 @@ services:
   event_sourcing.create_payment_command:
     class: ToyProject\EventSourcingBundle\Command\CreatePaymentCommand
     arguments:
-      - @event_sourcing.uuid_generator
-      - @broadway.command_handling.command_bus
+      - "@event_sourcing.uuid_generator"
+      - "@broadway.command_handling.command_bus"
     tags:
       - { name: console.command }
 
