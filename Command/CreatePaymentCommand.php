@@ -33,6 +33,17 @@ class CreatePaymentCommand extends Command
         $this->commandBus = $commandBus;
     }
 
+    protected function configure()
+    {
+        $this
+            ->setName('create-payment')
+            ->setDescription('Creates a payment');
+    }
+
+    /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $paymentId = $this->uuidGenerator->generate();
