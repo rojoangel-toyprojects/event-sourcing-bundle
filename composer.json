@@ -13,6 +13,7 @@
     "MIT"
   ],
   "require" : {
+    "rojoangel/event-sourcing" : "^0.1"
   },
   "autoload" : {
     "psr-0" : {
@@ -21,6 +22,8 @@
   },
   "target-dir" : "ToyProject/EventSourcingBundle",
   "repositories" : [{
+    "type" : "git",
+    "url" : "git@github.com:rojoangel/event-sourcing.git"
   }],
   "extra" : {
     "branch-alias" : {
