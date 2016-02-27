@@ -1,5 +1,5 @@
 {
-  "name" : "rojoangel-toyprojects/event_sourcing_bundle",
+  "name" : "rojoangel-toyprojects/event-sourcing-bundle",
   "description" : "Event sourcing toy project bundle",
   "type" : "symfony-bundle",
   "authors" : [{
