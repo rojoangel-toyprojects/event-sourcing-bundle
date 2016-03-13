@@ -14,5 +14,12 @@ services:
     tags:
       - { name: console.command }
 
+  event_sourcing.cancel_payment_command:
+    class: ToyProject\EventSourcingBundle\Command\CancelPaymentCommand
+    arguments:
+      - "@broadway.command_handling.command_bus"
+    tags:
+      - { name: console.command }
+
   event_sourcing.uuid_generator:
     class: Broadway\UuidGenerator\Rfc4122\Version4Generator
