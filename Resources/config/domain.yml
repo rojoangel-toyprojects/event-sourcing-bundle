@@ -1,0 +1,19 @@
+services:
+<service id="broadway_demo.basket.repository" class="BroadwayDemo\Basket\BasketRepository">
+            <argument type="service" id="broadway.event_store" />
+            <argument type="service" id="broadway.event_handling.event_bus" />
+            <argument type="collection">
+                <argument type="service" id="broadway.metadata_enriching_event_stream_decorator" />
+            </argument>
+        </service>
+
+  event_sourcing.payment_repository:
+    class: Repository\PaymentRepository
+    arguments:
+      - "@broadway.event_store.in_memory"
+      - "@broadway.event_handling.event_bus"
+
+  event_sourcing.create_payment_handler:
+    class: Handler\Payment\CreateHandler
+    arguments:
+      - "@event_sourcing.payment_repository"
