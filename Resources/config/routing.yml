@@ -1,3 +1,7 @@
 toy_project_event_sourcing_homepage:
     path:     /
     defaults: { _controller: ToyProjectEventSourcingBundle:Default:index }
+
+toy_project_event_sourcing_payment_events:
+    path:     /payments/{paymentId}
+    defaults: { _controller: ToyProjectEventSourcingBundle:Payment:index }
