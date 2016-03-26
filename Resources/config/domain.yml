@@ -9,3 +9,5 @@ services:
     class: Handler\Payment\CreateHandler
     arguments:
       - "@event_sourcing.payment_repository"
+    tags:
+      - { name: command_handler }
