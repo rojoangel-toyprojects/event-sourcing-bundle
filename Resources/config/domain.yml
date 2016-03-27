@@ -11,3 +11,11 @@ services:
       - "@event_sourcing.payment_repository"
     tags:
       - { name: command_handler }
+
+  event_sourcing.capture_payment_handler:
+    class: Handler\Payment\CaptureHandler
+    arguments:
+      - "@event_sourcing.payment_repository"
+    tags:
+      - { name: command_handler }
+
