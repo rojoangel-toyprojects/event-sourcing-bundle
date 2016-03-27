@@ -2,7 +2,7 @@ services:
   event_sourcing.payment_repository:
     class: Repository\PaymentRepository
     arguments:
-      - "@broadway.event_store.in_memory"
+      - "@broadway.event_store"
       - "@broadway.event_handling.event_bus"
 
   event_sourcing.create_payment_handler:
