@@ -774,11 +774,11 @@
         },
         {
             "name": "rojoangel/event-sourcing",
-            "version": "v0.1.0",
+            "version": "v0.1.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:rojoangel/event-sourcing.git",
-                "reference": "55f8655869899eea9cdca338d61614a09e80b8d6"
+                "reference": "91c88663c71bf13649f37038bb161ce12bd707c5"
             },
             "require": {
                 "broadway/broadway": "^0.8.0",
@@ -790,6 +790,11 @@
                 "phpunit/phpunit": "^4.8"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "v0.1.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "": [
@@ -805,7 +810,7 @@
                 }
             ],
             "description": "Event Sourcing Pet Project",
-            "time": "2016-02-24 21:29:29"
+            "time": "2016-03-27 10:29:12"
         },
         {
             "name": "symfony/polyfill-apcu",
