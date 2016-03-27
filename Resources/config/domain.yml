@@ -12,6 +12,13 @@ services:
     tags:
       - { name: command_handler }
 
+  event_sourcing.cancel_payment_handler:
+    class: Handler\Payment\CancelHandler
+    arguments:
+      - "@event_sourcing.payment_repository"
+    tags:
+      - { name: command_handler }
+
   event_sourcing.capture_payment_handler:
     class: Handler\Payment\CaptureHandler
     arguments:
@@ -19,3 +26,9 @@ services:
     tags:
       - { name: command_handler }
 
+  event_sourcing.refund_payment_handler:
+    class: Handler\Payment\RefundHandler
+    arguments:
+      - "@event_sourcing.payment_repository"
+    tags:
+      - { name: command_handler }
