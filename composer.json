@@ -31,6 +31,7 @@
     }
   },
   "require-dev": {
-    "symfony/symfony": "^2.8"
+    "symfony/symfony": "^2.8",
+    "phpunit/phpunit": "^4.8"
   }
 }
